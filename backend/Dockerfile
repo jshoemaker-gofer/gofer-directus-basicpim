@@ -16,6 +16,24 @@ RUN pnpm install directus-extension-computed-interface && pnpm install directus-
 pnpm install directus-extension-wpslug-interface && pnpm install pg && \
 pnpm install directus-extension-flexible-editor && pnpm install @directus-labs/simple-list-interface && \
 pnpm install @directus-labs/migration-bundle
+RUN pnpm install directus-extension-flow-manager@1.4.7
+RUN pnpm install directus-extension-grid-layout@1.1.2
+RUN pnpm install directus-extension-schema-management-module@2.0.1
+RUN pnpm install directus-extension-inline-form-interface@1.2.0
+RUN pnpm install @directus-labs/ai-image-generation-operation@1.0.2
+RUN pnpm install @directus-labs/experimental-m2a-interface@1.1.0
+RUN pnpm install @directus-labs/super-header-interface@1.1.1
+RUN pnpm install @directus-labs/inline-repeater-interface@1.0.0
+RUN pnpm install @directus-labs/seo-plugin@1.0.1
+RUN pnpm install directus-extension-wpslug-interface@1.1.0
+RUN pnpm install @directus-labs/ai-writer-operation@1.4.0
+RUN pnpm install @directus-labs/card-select-interfaces@1.0.0
+RUN pnpm install @directus-labs/simple-list-interface@1.0.0
+RUN pnpm install @directus-labs/command-palette-module@1.1.0
+RUN pnpm install directus-extension-group-tabs-interface@2.1.0
+RUN pnpm install @directus-labs/liquidjs-operation@1.1.0
+RUN pnpm install directus-extension-editable-layout@1.1.1
+
 
 # Migrations and Directus schema update
 RUN npx directus bootstrap
