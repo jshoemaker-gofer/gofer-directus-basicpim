@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-FROM directus/directus:11.6.1
+FROM directus/directus:11.7.2
 USER root
 RUN corepack enable \
 && corepack prepare pnpm@8.7.6 --activate \
@@ -35,10 +35,11 @@ RUN pnpm install directus-extension-editable-layout@1.1.1
 # Copy the extensions folder into the container
 COPY --chown=node:node ./extensions /directus/extensions
 
-RUN pnpm install --dir /directus/extensions/directus-extension-endpoint-geospatial --dev \
- && pnpm --dir /directus/extensions/directus-extension-endpoint-geospatial run build \
- && pnpm --dir /directus/extensions/directus-extension-endpoint-geospatial prune --prod
+# example to copy a custom extension
+# RUN pnpm install --dir /directus/extensions/directus-extension-endpoint-geospatial --dev \
+#  && pnpm --dir /directus/extensions/directus-extension-endpoint-geospatial run build \
+#  && pnpm --dir /directus/extensions/directus-extension-endpoint-geospatial prune --prod
  
 # Check if the extsion was compiled
-RUN ls -la /directus/extensions/directus-extension-endpoint-geospatial/dist
+# RUN ls -la /directus/extensions/directus-extension-endpoint-geospatial/dist
 
