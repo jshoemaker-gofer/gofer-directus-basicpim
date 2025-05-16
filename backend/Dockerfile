@@ -33,7 +33,7 @@ RUN pnpm install directus-extension-editable-layout@1.1.1
 # COPY --chown=node:node ./assets /directus/data/assets
 
 # Copy the extensions folder into the container
-COPY --chown=node:node ./extensions /directus/extensions
+# COPY --chown=node:node ./extensions /directus/extensions
 
 # example to copy a custom extension
 # RUN pnpm install --dir /directus/extensions/directus-extension-endpoint-geospatial --dev \
